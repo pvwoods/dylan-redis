@@ -7,6 +7,12 @@ define interface
 
   equate: {"char *" => <c-string>},
 
-  import: all
+  import: {
+    "redisConnect",
+    "redisCommand",
+    "freeReplyObject",
+    "redisFree",
+    "redisCommandArgv"
+  }
 
 end;
