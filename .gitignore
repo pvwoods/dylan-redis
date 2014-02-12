@@ -1,4 +1,5 @@
 *.swp
 _build/
+redis.dylan
 *.hdp
 .DS_Store
