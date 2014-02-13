@@ -16,3 +16,10 @@ define interface
   }
 
 end;
+
+define method main ()
+  let context = redisConnect("127.0.0.1", 6379);
+  redisCommand(context, "SET dylan rocks");
+end method main;
+
+main();
