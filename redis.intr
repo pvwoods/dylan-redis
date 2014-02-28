@@ -19,10 +19,10 @@ end;
 
 define class <redis-client> (<object>)
 
-  slot connected   :: <boolean>
+  slot connected   :: <boolean>;
   slot host        :: <string>, init-keyword: host:;
   slot port        :: <integer>, init-keyword: port:;
-  slot context     :: <redisContext>
+  slot context     :: <redisContext>;
 
   define method connect ()
     let context = redisConnect(host, port);
@@ -41,8 +41,6 @@ define class <redis-client> (<object>)
 end class;
 
 define method main ()
-  //let context = redisConnect("127.0.0.1", 6379);
-  //redisCommand(context, "SET dylan rocks");
   let redis = make(<redis-client>, host:"127.0.0.1", port:6379);
   redis.set("foo", "bar");
 end method main;
