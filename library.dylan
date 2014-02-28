@@ -5,7 +5,7 @@ define library redis
   use common-dylan;
   use c-ffi;
   use io;
-  
+
   export redis;
 
 end library;
@@ -16,13 +16,14 @@ define module redis
   use c-ffi;
   use dylan-direct-c-ffi;
   use streams;
-	
+
 
   export
     redisConnect,
     redisCommand,
     freeReplyObject,
     redisFree,
-    redisCommandArgv;
+    redisCommandArgv,
+    redis-client;
 
 end module;
